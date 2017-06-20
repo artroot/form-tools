@@ -1,0 +1,22 @@
+{
+  "name": "form-tools",
+  "version": "1.0.0",
+  "description": "Plugin simple cloning of nodes by template & some \"buns\" ",
+  "main": "form-tools.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/artroot/form-tools.js.git"
+  },
+  "keywords": [
+    "clone"
+  ],
+  "author": "Artem Semenishch <a.semenishch@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/artroot/form-tools.js/issues"
+  },
+  "homepage": "https://github.com/artroot/form-tools.js#readme"
+}

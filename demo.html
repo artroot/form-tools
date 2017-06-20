@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Tools Test</title>
+	<link rel="stylesheet" type="text/css" href="css/demo.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<script type="text/javascript" src="js/demo.js"></script>
+	<script type="text/javascript" src="form-tools.min.js"></script>
+</head>
+<body>
+	<nav>
+		<header>
+		<h3>form-tools.js</h3>
+		<p>Clone pattern plugin</p>
+		</header>
+	</nav>
+    <div class="content">
+	<article>
+		<header><h3>Example: Simple Clone</h3></header>
+
+		<p>Structure:</p>
+		<pre>
+			<code>
+&lt;form <b id="init_mark">cp-init="userList"</b>&gt;
+	&lt;span <b id="addbtn_mark">cp-add</b>&gt;Clone&lt;/span&gt;
+	&lt;div <b id="view_mark">cp-viewportport</b>&gt;
+		&lt;div <b id="template_mark">cp-template</b>&gt;
+			&lt;div <b id="inputs_mark">cp-inputs</b>&gt;
+	  			&lt;label <b id="counter_mark">cp-counter</b>&gt;1&lt;/label&gt;
+	    			&lt;input type="text" name="name[]"&gt;
+	    			&lt;input type="email" name="email[]"&gt;
+	    			&lt;span <b id="rmbtn_mark">cp-rm</b>&gt;&lt;/span&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/form&gt;
+			</code>
+		</pre>
+		<p>Result:</p>
+		<div class="res-example">
+			<form class="form-inline" cp-init="userList" 
+			onmouseover="mark(init_mark, this);" onmouseout="mark(init_mark, this);">
+				<span class="btn btn-default" onmouseover="mark(addbtn_mark, this);" onmouseout="mark(addbtn_mark, this);" cp-add>Clone <span class="glyphicon glyphicon-plus"></span></span>
+				</br></br>
+	  			<div cp-viewport style="padding: 10px;" onmouseover="mark(view_mark, this);" onmouseout="mark(view_mark, this);">
+					<div cp-template style="padding: 10px;" onmouseover="mark(template_mark, this);" onmouseout="mark(template_mark, this);">
+						<div cp-inputs class="form-group" style="padding: 10px;" onmouseover="mark(inputs_mark, this);" onmouseout="mark(inputs_mark, this);">
+				   			<label cp-counter onmouseover="mark(counter_mark, this);" onmouseout="mark(counter_mark, this);">1</label>
+				    		<input type="text" class="form-control" name="name[]" placeholder="Name">
+				    		<input type="email" class="form-control" name="email[]" placeholder="Email">
+				    		<span class="btn glyphicon glyphicon-trash" cp-rm onmouseover="mark(rmbtn_mark, this);" onmouseout="mark(rmbtn_mark, this);"></span>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</article>
+
+	<article>
+		<header><h3>Example: Clone With Options</h3></header>
+
+		<p>Options:</p>
+		<ul>
+			<li><b>minNode</b> - Min. positions = 1; <b>minNodeMsg</b> - Personal reject message;</li>
+			<li><b>maxNode</b> - Max. positions = 6; <b>maxNodeMsg</b> - Personal reject message;</li>
+			<li><b>massAdd</b> - Adition via button hold of 5 positions;</li>
+			<li><b>startNode</b> - Start build with 3 positions;</li>
+		</ul>
+
+		<p>Structure:</p>
+		<pre>
+			<code>
+&lt;form <b>cp-init="addressList"</b> <b>cp-options="{
+	minNode:1, minNodeMsg:'This form must contain at least one address.',
+	maxNode:6, maxNodeMsg:'You can add only 6 adresses.', massAdd:5, startNode:3
+}"</b>&gt;
+	&lt;span <b>cp-add</b>&gt;Clone&lt;/span&gt;
+	&lt;div <b>cp-viewport</b>&gt;
+		&lt;div <b>cp-template</b>&gt;
+			&lt;div <b>cp-inputs</b>&gt;
+	  			&lt;label <b>cp-counter</b>&gt;1&lt;/label&gt;
+	    			&lt;input type="text" name="country[]"&gt;
+	    			&lt;input type="text" name="city[]"&gt;
+	    			&lt;input type="text" name="street[]"&gt;
+	    			&lt;span <b>cp-rm</b>&gt;&lt;/span&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/form&gt;
+			</code>
+		</pre>
+		<p>Result:</p>
+		<div class="res-example">
+			<form class="form-inline" cp-init="addressList" cp-options="{
+				minNode:1, minNodeMsg:'This form must contain at least one address.',
+				maxNode:6, maxNodeMsg:'You can add only 6 addreses.', massAdd:5, startNode:3
+				}">
+				<span class="btn btn-default" cp-add>Clone <span class="glyphicon glyphicon-plus"></span></span>
+				</br></br>
+	  			<div cp-viewport>
+					<div cp-template>
+						<div cp-inputs class="form-group">
+				   			<label cp-counter>1</label>
+				    		<input type="text" class="form-control" name="country[]" placeholder="Country">
+				    		<input type="text" class="form-control" name="city[]" placeholder="City">
+				    		<input type="text" class="form-control" name="street[]" placeholder="Street">
+				    		<span class="btn glyphicon glyphicon-trash" cp-rm></span>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</article>
+
+
+	<article>
+		<header><h3>Example: Clone With Sepecified Data</h3></header>
+
+		<p>Structure:</p>
+		<pre>
+			<code>
+&lt;form <b>cp-init="orders"</b> <b>cp-options="{massAdd:5}"</b>&gt;
+	&lt;span <b>cp-add</b>&gt;Clone&lt;/span&gt;
+	&lt;div <b>cp-viewport</b>&gt;
+		&lt;div <b>cp-template</b>&gt;
+			&lt;div <b>cp-inputs</b>&gt;
+	  			&lt;label <b>cp-counter</b>&gt;1&lt;/label&gt;
+	    			&lt;input type="text" name="name[]"&gt;
+	    			&lt;input type="text" name="cost[]"&gt;
+	    			&lt;input type="datetime-local" name="date[]"&gt;
+	    			&lt;span <b>cp-rm</b>&gt;&lt;/span&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/form&gt;
+			</code>
+		</pre>
+
+		<p>Putting data (json):</p>
+		<pre>
+			<code>
+&lt;script type="text/javascript"&gt;
+	formTools.pushData('orders',[
+		['blackberry', '15$', '2017-06-19T09:30'],
+		['', '42$', '2017-06-07T11:22'],
+		['strawberry', '21$', '2017-05-22T00:15'],
+		['blueberry', '18$', '2017-02-01T18:35'],
+		['cranberries', '14$', '2016-11-07T21:04']
+	]);
+&lt;/script&gt;
+			</code>
+		</pre>
+
+		<p>Result:</p>
+		<div class="res-example">
+			<form class="form-inline" cp-init="orders" cp-options="{massAdd:5}">
+				<span class="btn btn-default" cp-add>Clone <span class="glyphicon glyphicon-plus"></span></span>
+				</br></br>
+	  			<div cp-viewport>
+					<div cp-template>
+						<div cp-inputs class="form-group">
+				   			<label cp-counter>1</label>
+				    		<input type="text" class="form-control" name="name[]" placeholder="Name">
+				    		<input type="text" class="form-control" name="cost[]" placeholder="Cost">
+				    		<input type="datetime-local" class="form-control" name="date[]" placeholder="Date">
+				    		<span class="btn glyphicon glyphicon-trash" cp-rm></span>
+						</div>
+					</div>
+				</div>
+			</form>
+			<script type="text/javascript">
+				formTools.pushData('orders',[
+					['blackberry', '15$', '2017-06-19T09:30'],
+					['', '42$', '2017-06-07T11:22'],
+					['strawberry', '21$', '2017-05-22T00:15'],
+					['blueberry', '18$', '2017-02-01T18:35'],
+					['cranberries', '14$', '2016-11-07T21:04']
+				]);
+			</script>
+		</div>
+	</article>
+	<div class="bs-callout bs-callout-danger">
+		<p>If you need to render an add button or viewport from the initialization area, you must set an identifier equal to the value of the <b>cp-init</b> tag.</p>
+		<pre>
+			<code>
+&lt;span <b>cp-add="imInitId"</b>&gt;Clone&lt;/span&gt;
+	...
+&lt;form <b>cp-init="imInitId"</b>&gt;
+	...
+&lt;/form&gt;
+	...
+&lt;div <b>cp-viewport="imInitId"</b>&gt;
+	...
+&lt;/div&gt;
+			</code>
+		</pre>
+	</div>
+	<article>
+		<p>Mark input tag via set-nulls attribute when you need adding '.00' after your numbers.</p>
+		<pre>
+			<code>
+&lt;input type="number" <b>set-nulls</b>/&gt;
+			</code>
+		</pre>
+		<p>Result:</p>
+		<div class="res-example">
+			<input type="number" name="cost1" placeholder="00.00" value="107" set-nulls />
+			<input type="number" name="cost2" placeholder="00.00" set-nulls />
+		</div>
+	</article>
+
+	</div>
+
+<footer><p>artroot 2017.</p></footer>
+
+</body>
+</html>
