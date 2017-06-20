@@ -49,7 +49,7 @@ More examples and documentation you can see in my website http://artsemenishch.i
 
 ### With composer 
 
-`composer require artroot/form-tools.js`
+`composer require artroot/form-tools`
 
 ### Regular Setup
 To install formTools, just download the form-tools.min.js script and add into your head tag.
