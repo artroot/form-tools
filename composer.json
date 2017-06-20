@@ -8,7 +8,7 @@
     "url": "git://github.com/artroot/form-tools"
   },
   "keywords": [
-    "clone"
+    "clone", "form", "tools", "cloneNode"
   ],
   "author": "Artem Semenishch <a.semenishch@gmail.com>",
   "license": "MIT",
