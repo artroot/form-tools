@@ -1,4 +1,4 @@
-# [formTools](http://artsemenishch.inf.ua/docs/projects/js/form-tools)
+# [form-tools](http://artsemenishch.inf.ua/docs/projects/js/form-tools)
 
 The simple cloning of node by template.
 
