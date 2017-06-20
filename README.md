@@ -42,7 +42,7 @@ Try to use formTools when you need to generate fields in your input form, for ex
 </form>
 ```
 
-More examples and documentation you can see in my website http://artsemenishch.inf.ua/docs/projects/js/form-tools/demo.
+More examples and documentation you can see in my website http://artsemenishch.inf.ua/docs/projects/js/form-tools/
 
 
 ## Installation
