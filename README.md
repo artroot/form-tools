@@ -29,7 +29,7 @@ Try to use formTools when you need to generate fields in your input form, for ex
 ```html
 <form cp-init="userList" cp-options="{minNode:1}">
 	<span cp-add>Clone</span>
-	<div cp-viewpor>
+	<div cp-viewport>
 		<div cp-template>
 			<div cp-inputs>
 	  			<label cp-counter>1</label>
