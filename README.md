@@ -33,9 +33,9 @@ Try to use formTools when you need to generate fields in your input form, for ex
 		<div cp-template>
 			<div cp-inputs>
 	  			<label cp-counter>1</label>
-	    		<input type="text" name="name[]">
-	    		<input type="email" name="email[]">
-	    		<span cp-rm></span>
+	    			<input type="text" name="name[]">
+	    			<input type="email" name="email[]">
+	    			<span cp-rm></span>
 			</div>
 		</div>
 	</div>
