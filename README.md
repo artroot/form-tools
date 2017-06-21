@@ -2,8 +2,6 @@
 
 The simple cloning of node by template.
 
-## Motivation
-
 * Declarative style of defining bindings and rules;
 * Flexibility of template.
 
