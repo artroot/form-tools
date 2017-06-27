@@ -40,7 +40,7 @@ Try to use formTools when you need to generate fields in your input form, for ex
 </form>
 ```
 
-More examples and documentation you can see in my website http://artsemenishch.inf.ua/docs/projects/js/form-tools/
+More examples and documentation you can see in my website https://artsemenishch.inf.ua/docs/projects/js/form-tools/
 
 
 ## Installation
@@ -59,7 +59,7 @@ To install formTools, just download the form-tools.min.js script and add into yo
 or use these links.
 
 ```html
-<script src="http://artsemenishch.inf.ua/cdn/js/form-tools/form-tools.min.js"></script>
+<script src="https://artsemenishch.inf.ua/cdn/js/form-tools/form-tools.min.js"></script>
 ```
 
 
