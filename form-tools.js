@@ -65,8 +65,8 @@
 
     FT.discovery = function () {
         init(consts.cp.init, function (init) {
-            var initName = init ? init.getAttribute(consts.cp.init).valueOf() : false;
-            if (initName && !(initName in FT.inits)) FT.inits[initName] = new FT.clonePattern(init, init.getAttribute(consts.cp.options));
+            var initName = (init ? init.getAttribute(consts.cp.init).valueOf() : false);
+            if (initName) FT.inits[initName] = new FT.clonePattern(init, init.getAttribute(consts.cp.options));
         });
         init(consts.setNulls.init, function (init) {
             if (init) {
@@ -160,7 +160,18 @@
                     inputs = inputs.querySelectorAll('*[name]');
                     inputs.forEach(function (input) {
                         if (typeof input !== 'undefined' && input.name) {
-                            input.value = (data[i] ? data[i] : null);
+                            switch (input.tagName){
+                                case 'INPUT':
+                                    input.value = (data[i] ? data[i] : null);
+                                    break;
+                                case 'SELECT':
+                                    var option = getElementsByAttr(input,'value',(data[i] ? data[i] : null),'option');
+                                    option.selected = true;
+                                    break;
+                                default:
+                                    input.innerHTML = (data[i] ? data[i] : null);
+                                    break;
+                            }
                             i++;
                         }
                     });
