@@ -59,7 +59,7 @@ To install formTools, just download the form-tools.min.js script and add into yo
 or use these links.
 
 ```html
-<script src="https://cdn.artsemenishch.com.ua/js/form-tools/form-tools.min.js"></script>
+<script src="https://libs.artsemenishch.com.ua/js/form-tools/form-tools.min.js"></script>
 ```
 
 
