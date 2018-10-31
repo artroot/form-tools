@@ -1,4 +1,4 @@
-# [form-tools](http://artsemenishch.inf.ua/docs/projects/js/form-tools)
+# [form-tools](https://docs.artsemenishch.inf.ua/projects/js/form-tools/)
 
 The simple cloning of node by template.
 
@@ -40,7 +40,7 @@ Try to use formTools when you need to generate fields in your input form, for ex
 </form>
 ```
 
-More examples and documentation you can see in my website https://artsemenishch.inf.ua/docs/projects/js/form-tools/
+More examples and documentation you can see in my website https://docs.artsemenishch.inf.ua/projects/js/form-tools/
 
 
 ## Installation
@@ -59,7 +59,7 @@ To install formTools, just download the form-tools.min.js script and add into yo
 or use these links.
 
 ```html
-<script src="https://artsemenishch.inf.ua/cdn/js/form-tools/form-tools.min.js"></script>
+<script src="https://cdn.artsemenishch.com.ua/js/form-tools/form-tools.min.js"></script>
 ```
 
 
